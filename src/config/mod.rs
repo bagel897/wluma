@@ -36,6 +36,7 @@ fn parse() -> Result<app::Config, toml::de::Error> {
                     capturer: match o.capturer {
                         file::Capturer::None => app::Capturer::None,
                         file::Capturer::Wlroots => app::Capturer::Wlroots,
+                        file::Capturer::Pipewire => app::Capturer::Pipewire,
                     },
                 })
             })
@@ -46,6 +47,7 @@ fn parse() -> Result<app::Config, toml::de::Error> {
                     capturer: match o.capturer {
                         file::Capturer::None => app::Capturer::None,
                         file::Capturer::Wlroots => app::Capturer::Wlroots,
+                        file::Capturer::Pipewire => app::Capturer::Pipewire,
                     },
                 })
             }))

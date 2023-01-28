@@ -2,6 +2,8 @@ use std::collections::HashMap;
 
 #[derive(Debug, Clone)]
 pub enum Capturer {
+    Pipewire,
+
     Wlroots,
     None,
 }

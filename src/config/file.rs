@@ -4,6 +4,7 @@ use std::collections::HashMap;
 #[derive(Deserialize, Debug)]
 #[serde(rename_all = "lowercase")]
 pub enum Capturer {
+    Pipewire,
     Wlroots,
     None,
 }

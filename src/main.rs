@@ -69,6 +69,9 @@ fn main() {
                         .spawn(move || {
                             let frame_capturer: Box<dyn frame::capturer::Capturer> =
                                 match output_capturer {
+                                    config::Capturer::Pipewire => {
+                                        Box::<frame::capturer::pipewire::Capturer>::default()
+                                    }
                                     config::Capturer::Wlroots => {
                                         Box::<frame::capturer::wlroots::Capturer>::default()
                                     }
